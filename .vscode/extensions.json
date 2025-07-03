@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "humao.rest-client",
+        "ms-azuretools.vscode-bicep",
+        "ms-dotnettools.csdevkit",
+        "streetsidesoftware.code-spell-checker",
+        "streetsidesoftware.code-spell-checker-dutch",
+        "oracle.oracle-java"
+    ]
+}

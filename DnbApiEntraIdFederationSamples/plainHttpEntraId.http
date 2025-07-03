@@ -1,0 +1,21 @@
+// The authority URI from DNB. This must be the already specified value.
+@dnbAuthorityUri = https://login.microsoftonline.com:443/9ecbd628-0072-405d-8567-32c6750b0d3e
+
+// The scope of a specific DNB API. You will receive a unique scope for each DNB API you want to access as a partner.
+@dnbApiClientScopes = <dnbClientScope>/.default
+
+// The combination of values needed to obtain an access token from your own identity provider.
+// This example uses Entra ID.
+@entraIdClientId = <yourEntraIdClientId>
+@entraIdClientSecret = <yourEntraIdClientSecret>
+
+// Obtain an OAuth 2.0 Token with DNB authority and DNB scope.
+// This example uses the OAuth 2.0 Client Credentials Grant. 
+// @name loginEntraId
+POST {{dnbAuthorityUri}}/oauth2/v2.0/token HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=client_credentials
+&client_id={{entraIdClientId}}
+&client_secret={{entraIdClientSecret}}
+&scope={{dnbApiClientScopes}}

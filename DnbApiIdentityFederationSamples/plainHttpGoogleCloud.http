@@ -1,0 +1,30 @@
+// The shared audience. The already specified value must be used as the audience for your own identity provider's API or application.
+@sharedAudience = api://DnbPartnerIdentityTrust
+
+// The authority URI from DNB. This must be the already specified value.
+@dnbAuthorityUri = https://login.microsoftonline.com:443/9ecbd628-0072-405d-8567-32c6750b0d3e
+
+// The client ID from a DNB Identity, representing you as a partner at DNB. You will receive a unique client ID for each identity you federate with DNB as a partner.
+@dnbClientId = <dnbClientId>
+
+// The scope of a specific DNB API. You will receive a unique scope for each DNB API you want to access as a partner.
+@dnbApiClientScopes = <dnbClientScope>/.default
+
+// Obtain a token from your own identity provider.
+// This example gets a token from Google Cloud Platform (GCP) using a service account in 3 steps:
+// (1) install the gcloud CLI and authenticate with your service account.
+// (2) run: gcloud auth print-identity-token --audiences=api://DnbPartnerIdentityTrust
+// (3) copy the output token and paste it in the @GoogleCloudToken variable below.
+
+@GoogleCloudToken = <yourGoogleCloudToken>
+
+// The actual token exchange. You provide your own token from your identity provider to DNB, which will then exchange it for a DNB access token.
+// @name tokenExchange
+POST {{dnbAuthorityUri}}/oauth2/v2.0/token
+Content-Type: application/x-www-form-urlencoded
+
+scope={{dnbApiClientScopes}}
+&client_id={{dnbClientId}}
+&client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwt-bearer
+&client_assertion={{GoogleCloudToken}}
+&grant_type=client_credentials
