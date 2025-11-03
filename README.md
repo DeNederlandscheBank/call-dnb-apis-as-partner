@@ -11,7 +11,7 @@ For partners running on Entra ID (Workforce tenant type), please refer to [DNB A
 
 ## DNB API Entra ID Federation 🏦
 
-DNB API Entra ID Federation configures your (multi-tenant) Application Registration as a [nonconsensual (no tenant-wide admin consent)](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent) representation in our tenant. Please see [the configuration documentation for DNB API Entra ID Federation](/README_CONFIG_ENTRAID_FED.md) to configure this as a partner.
+DNB API Entra ID Federation configures your ([multi-tenant](https://learn.microsoft.com/en-us/entra/identity-platform/howto-convert-app-to-be-multi-tenant#update-registration-to-be-multitenant)) Application Registration as a [nonconsensual (no tenant-wide admin consent)](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/grant-admin-consent) representation in our tenant. Please see [the configuration documentation for DNB API Entra ID Federation](/README_CONFIG_ENTRAID_FED.md) to configure this as a partner.
 
 ## DNB API Identity Federation 🏦
 
