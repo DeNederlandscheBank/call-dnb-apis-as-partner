@@ -36,7 +36,7 @@ You send the following variable values to DNB:
 
 | Variable | Explanation
 |-|-
-| `partnerIdentityClientId`   | The [application (client) ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application#application-id-client-id) of your Microsoft Entra ID multi-tenant identity.
+| `partnerIdentityClientId`   | The [application (client) ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application#application-id-client-id) of your Microsoft Entra ID [multi-tenant](https://learn.microsoft.com/en-us/entra/identity-platform/howto-convert-app-to-be-multi-tenant#update-registration-to-be-multitenant) app registration.
 | `partnerTenantId`   | The [Directory (tenant) ID](https://learn.microsoft.com/en-us/entra/fundamentals/how-to-find-tenant) of your Microsoft Entra ID tenant.
 
 ## How to make it work?
