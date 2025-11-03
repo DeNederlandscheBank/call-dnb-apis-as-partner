@@ -25,7 +25,7 @@ To maintain consistency, new samples should follow the same structure and conven
 - Declare all variables and comments in the same order as in the .NET and Java samples.
 - Avoid introducing abstractions beyond those already present in the .NET and Java samples.
 - For new samples written in Java, use Gradle as the build tool.
-- For new samples written in .NET, integrate with the existing setup by adding your project to the [existing solution file](/cross-company-auth.sln).
+- For new samples written in .NET, integrate with the existing setup by adding your project to the [existing solution file](/cross-company-auth.slnx).
 - To help us validate your sample, please include an expired access token or temporary credentials in the PR description to prove that the configuration works end-to-end.
 
 ## License
