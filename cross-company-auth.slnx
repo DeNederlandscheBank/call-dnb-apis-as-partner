@@ -1,0 +1,14 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/DnbApiEntraIdFederationSamples/">
+    <Project Path="DnbApiEntraIdFederationSamples/dotnetEntraId/dotnetEntraId.csproj" />
+  </Folder>
+  <Folder Name="/DnbApiIdentityFederationSamples/">
+    <Project Path="DnbApiIdentityFederationSamples/dotnetAuth0/dotnetAuth0.csproj" />
+    <Project Path="DnbApiIdentityFederationSamples/dotnetGoogleCloud/dotnetGoogleCloud.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,40 @@
+// The authority URI from DNB. This must be the already specified value.
+@dnbAuthorityUri = https://login.microsoftonline.com:443/9ecbd628-0072-405d-8567-32c6750b0d3e
+
+// The client ID from a DNB Identity, representing you as a partner at DNB. You will receive a unique client ID for each identity you federate with DNB as a partner.
+@dnbClientId = <dnbClientId>
+
+// The scope of a specific DNB API. You will receive a unique scope for each DNB API you want to access as a partner.
+@dnbApiClientScopes = <dnbClientScope>/.default
+
+// The combination of values needed to obtain an access token from your own identity provider.
+// This example uses Okta, but you can use any identity provider or technique that supports generating JWTs.
+@OktaClientId = <yourOktaClientId>
+@OktaClientSecret = <yourOktaClientSecret>
+@OktaDomain = <yourOktaDomain>.okta.com
+@OktaAuthorizationServerId = <yourOktaAuthorizationServerId>
+
+// Obtain an OAuth 2.0 Token from your own identity provider.
+// This example uses the OAuth 2.0 Client Credentials Grant. 
+// @name loginOkta
+POST {{OktaDomain}}:443/oauth2/{{OktaAuthorizationServerId}}/v1/token HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=client_credentials
+&client_id={{OktaClientId}}
+&client_secret={{OktaClientSecret}}
+
+###
+
+@OktaToken = {{loginOkta.response.body.$.access_token}}
+
+// The actual token exchange. You provide your own token from your identity provider to DNB, which will then exchange it for a DNB access token.
+// @name tokenExchange
+POST {{dnbAuthorityUri}}/oauth2/v2.0/token
+Content-Type: application/x-www-form-urlencoded
+
+scope={{dnbApiClientScopes}}
+&client_id={{dnbClientId}}
+&client_assertion_type=urn%3Aietf%3Aparams%3Aoauth%3Aclient-assertion-type%3Ajwt-bearer
+&client_assertion={{OktaToken}}
+&grant_type=client_credentials
