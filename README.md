@@ -30,4 +30,4 @@ To maintain consistency, new samples should follow the same structure and conven
 
 ## License
 
-The code is licensed under the MIT/X license an extended version of the licence: [MIT](https://choosealicense.com/licenses/mit/)
+The code is licensed under the MIT/X license, an extended version of the license: [MIT](https://choosealicense.com/licenses/mit/)
