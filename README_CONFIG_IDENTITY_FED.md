@@ -116,7 +116,7 @@ The following implementation samples are based on [Google Cloud's Identity and A
 
 The following implementation samples are based on [Amazon Cognito](https://aws.amazon.com/cognito/), a modern identity service by Amazon Web Services (AWS).
 
-A [pre token generation Lambda trigger](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-pre-token-generation.html) must be configured to add the `aud` claim. Per AWS constraints, the `auth` claim value can only be the pre-defined `clientId` from the called context. The following `Node.js` lambda has been verified to work:
+A [pre token generation Lambda trigger](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-lambda-pre-token-generation.html) must be configured to add the `aud` claim. Per AWS constraints, the `aud` claim value can only be the pre-defined `clientId` from the called context. The following `Node.js` lambda has been verified to work:
 
 ```js
 const handler = async (event) => {
