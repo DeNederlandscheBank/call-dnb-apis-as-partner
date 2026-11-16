@@ -3,7 +3,7 @@
 Please note: This file is intended for internal DNB use only.
 -------------------------------------------------------------
 
-Configures an identity for DNB API Identity Federation with a DNB API role assignment.
+Configures your (partner) identity for DNB API Identity Federation with a DNB API role assignment.
 
 */
 
