@@ -1,8 +1,5 @@
 {
-    "experimentalFeaturesEnabled": {
-        "extensibility": true
-    },
     "extensions": {  
-        "graphV1": "br:mcr.microsoft.com/bicep/extensions/microsoftgraph/v1.0:0.2.0-preview" //https://mcr.microsoft.com/en-us/artifact/mar/bicep/extensions/microsoftgraph/v1.0/tags
+        "graphV1": "br:mcr.microsoft.com/bicep/extensions/microsoftgraph/v1.0:1.0.0" //https://mcr.microsoft.com/en-us/artifact/mar/bicep/extensions/microsoftgraph/v1.0/tags
     } 
 }
