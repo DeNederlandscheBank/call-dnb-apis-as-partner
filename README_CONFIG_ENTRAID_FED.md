@@ -45,6 +45,6 @@ We provide sample configurations in the following languages and frameworks to he
 
 | Sample | Description
 |-|-
-| [HTTP](/DnbApiEntraIdFederationSamples/plainHttpEntraId.http) | Uses [Huachao Mao's REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) for VS Code.
+| [HTTP](/DnbApiEntraIdFederationSamples/plainHttpEntraId.http) | Uses [REST Client CE](https://marketplace.visualstudio.com/items?itemName=vscode-restclient.restclient) for VS Code.
 | [.NET](/DnbApiEntraIdFederationSamples/dotnetEntraId/Program.cs) | Uses the [Microsoft Authentication Library (MSAL) for .NET](https://learn.microsoft.com/en-us/dotnet/api/microsoft.identity.client?view=msal-dotnet-latest).
 | [Java](/DnbApiEntraIdFederationSamples/javaEntraId/app/src/main/java/App.java) | Uses [MSAL4J](https://learn.microsoft.com/en-us/entra/msal/java/). Built with Gradle.
