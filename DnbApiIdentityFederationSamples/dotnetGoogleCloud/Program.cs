@@ -18,12 +18,16 @@ var dnbApiClientScopes = new[] { "<dnbClientScope>/.default" };
 // This example uses the OAuth 2.0 Client Credentials Grant. 
 async Task<string> GetMyProviderTokenAsync()
 {
-    var googleServiceAccountCredential = GoogleCredential
-           .FromFile("service-account.json") // path to your GCP service account key
-           .CreateScoped(sharedAudience)
-           .UnderlyingCredential as ServiceAccountCredential;
+    // The service account key from the project directory is copied to the output directory (see .csproj).
+    var credentialPath = Path.Combine(AppContext.BaseDirectory, "service-account.json");
 
-    return await googleServiceAccountCredential!.GetAccessTokenForRequestAsync();
+    var googleServiceAccountCredential = CredentialFactory
+           .FromFile<ServiceAccountCredential>(credentialPath);
+
+    var oidcToken = await googleServiceAccountCredential
+           .GetOidcTokenAsync(OidcTokenOptions.FromTargetAudience(sharedAudience));
+
+    return await oidcToken.GetAccessTokenAsync();
 }
 
 // The actual token exchange. You provide your own token from your identity provider to DNB, which will then exchange it for a DNB access token.
