@@ -3,7 +3,7 @@
 Please note: This file is intended for internal DNB use only.
 -------------------------------------------------------------
 
-Configures an identity for DNB API Identity Federation with a DNB API role assignment.
+Configures your (partner) identity for DNB API Identity Federation with a DNB API role assignment.
 
 */
 
@@ -27,7 +27,7 @@ param partnerIdentitySubject string
 @description('The audience claim of the partner\'s identity provider\'s identity-token. In most cases, leave as default.')
 param partnerIdentityAudience string = 'api://DnbPartnerIdentityTrust'
 
-resource partnerRepresentationAsManagedIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2025-01-31-preview' = {
+resource partnerRepresentationAsManagedIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2025-05-31-preview' = {
   location: resourceGroup().location
   name: 'id-partner-${identityResourcePostfix}'
 

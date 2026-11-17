@@ -1,6 +1,6 @@
 {
     "recommendations": [
-        "humao.rest-client",
+        "vscode-restclient.restclient",
         "ms-azuretools.vscode-bicep",
         "ms-dotnettools.csdevkit",
         "streetsidesoftware.code-spell-checker",

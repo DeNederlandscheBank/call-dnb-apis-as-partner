@@ -32,7 +32,7 @@ public class App {
     // Obtain an OAuth 2.0 Token with DNB authority and DNB scope.
     // This example uses the OAuth 2.0 Client Credentials Grant. 
     public static String GetMyProviderTokenAsync() throws Exception {
-        AuthAPI authAPI = new AuthAPI(auth0Domain, auth0ClientId, auth0ClientSecret);
+        AuthAPI authAPI = AuthAPI.newBuilder(auth0Domain, auth0ClientId, auth0ClientSecret).build();
         TokenHolder tokenHolder = authAPI.requestToken(sharedAudience)
                 .execute().getBody();
 

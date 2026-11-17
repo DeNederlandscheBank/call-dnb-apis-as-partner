@@ -59,7 +59,7 @@ The following implementation samples are based on [Auth0](https://auth0.com/).
 
 | Sample | Description
 |-|-
-| [HTTP](/DnbApiIdentityFederationSamples/plainHttpAuth0.http) | Uses [Huachao Mao's REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) for VS Code.
+| [HTTP](/DnbApiIdentityFederationSamples/plainHttpAuth0.http) | Uses [REST Client CE](https://marketplace.visualstudio.com/items?itemName=vscode-restclient.restclient) for VS Code.
 | [.NET](/DnbApiIdentityFederationSamples/dotnetAuth0/Program.cs) | Uses the [Microsoft Authentication Library (MSAL) for .NET](https://learn.microsoft.com/en-us/dotnet/api/microsoft.identity.client?view=msal-dotnet-latest) and the [Auth0 Authentication API](https://github.com/auth0/auth0.net/tree/master?tab=readme-ov-file#authentication-api).
 | [Java](/DnbApiIdentityFederationSamples/javaAuth0/app/src/main/java/App.java) | Uses [MSAL4J](https://learn.microsoft.com/en-us/entra/msal/java/) and the [Java client library for the Auth0 platform](https://github.com/auth0/auth0-java). Built with Gradle.
 
@@ -71,7 +71,7 @@ A single-tenant app registration must be configured. The `ciamlogin` token endpo
 
 | Sample | Description
 |-|-
-| [HTTP](/DnbApiIdentityFederationSamples/plainHttpEntraExternalId.http) | Uses [Huachao Mao's REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) for VS Code.
+| [HTTP](/DnbApiIdentityFederationSamples/plainHttpEntraExternalId.http) | Uses [REST Client CE](https://marketplace.visualstudio.com/items?itemName=vscode-restclient.restclient) for VS Code.
 
 ### Keycloak
 
@@ -81,7 +81,7 @@ A Client Scope `Mapper` must be configured of type `Audience` to add the `aud` c
 
 | Sample | Description
 |-|-
-| [HTTP](/DnbApiIdentityFederationSamples/plainHttpKeycloak.http) | Uses [Huachao Mao's REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) for VS Code.
+| [HTTP](/DnbApiIdentityFederationSamples/plainHttpKeycloak.http) | Uses [REST Client CE](https://marketplace.visualstudio.com/items?itemName=vscode-restclient.restclient) for VS Code.
 
 ### Okta
 
@@ -91,7 +91,7 @@ An `Authorization Server` must be configured under `Security - API`, configure t
 
 | Sample | Description
 |-|-
-| [HTTP](/DnbApiIdentityFederationSamples/plainHttpOkta.http) | Uses [Huachao Mao's REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) for VS Code.
+| [HTTP](/DnbApiIdentityFederationSamples/plainHttpOkta.http) | Uses [REST Client CE](https://marketplace.visualstudio.com/items?itemName=vscode-restclient.restclient) for VS Code.
 
 ### SAP
 
@@ -101,7 +101,7 @@ An [OpenID Connect Application for Client Credentials Flow](https://help.sap.com
 
 | Sample | Description
 |-|-
-| [HTTP](/DnbApiIdentityFederationSamples/plainHttpSAP.http) | Uses [Huachao Mao's REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) for VS Code.
+| [HTTP](/DnbApiIdentityFederationSamples/plainHttpSAP.http) | Uses [REST Client CE](https://marketplace.visualstudio.com/items?itemName=vscode-restclient.restclient) for VS Code.
 
 ### Google Cloud
 
@@ -109,7 +109,7 @@ The following implementation samples are based on [Google Cloud's Identity and A
 
 | Sample | Description
 |-|-
-| [HTTP](/DnbApiIdentityFederationSamples/plainHttpGoogleCloud.http) | Uses [Huachao Mao's REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) for VS Code and the [Google Cloud CLI](https://cloud.google.com/sdk/docs/install).
+| [HTTP](/DnbApiIdentityFederationSamples/plainHttpGoogleCloud.http) | Uses [REST Client CE](https://marketplace.visualstudio.com/items?itemName=vscode-restclient.restclient) for VS Code and the [Google Cloud CLI](https://cloud.google.com/sdk/docs/install).
 | [.NET](/DnbApiIdentityFederationSamples/dotnetGoogleCloud/Program.cs) | Uses the [Microsoft Authentication Library (MSAL) for .NET](https://learn.microsoft.com/en-us/dotnet/api/microsoft.identity.client?view=msal-dotnet-latest) and the [Google APIs client Library for .NET](https://github.com/googleapis/google-api-dotnet-client).
 
 ### AWS
@@ -137,4 +137,4 @@ export { handler };
 
 | Sample | Description
 |-|-
-| [HTTP](/DnbApiIdentityFederationSamples/plainHttpAWS.http) | Uses [Huachao Mao's REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) for VS Code.
+| [HTTP](/DnbApiIdentityFederationSamples/plainHttpAWS.http) | Uses [REST Client CE](https://marketplace.visualstudio.com/items?itemName=vscode-restclient.restclient) for VS Code.
